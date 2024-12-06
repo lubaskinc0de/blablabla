@@ -23,11 +23,12 @@ class MyWidget(QMainWindow):
         qp.setBrush(QColor(255, 216, 0))
         qp.setPen(QColor(255, 216, 0))
 
-        x = random.randint(50, self.width())
-        y = random.randint(50, self.height())
-        d = random.randint(50, 150)
+        for i in range(3):
+            x = random.randint(50, self.width())
+            y = random.randint(50, self.height())
+            d = random.randint(50, 150)
 
-        qp.drawEllipse(QPoint(x, y), d, d)
+            qp.drawEllipse(QPoint(x, y), d, d)
         qp.end()
 
     def btn_clicked(self):
